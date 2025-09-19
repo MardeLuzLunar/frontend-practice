@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+    <style>
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 注意是form不是from -->
+    <form action="xxx.php" method="get" target="_blank">
+        <!-- 一般method用post比较安全 -->
+        <ul>
+            <li>
+                用户名：<input type="text" name="username" value="input your username" maxlength="10" accesskey="u" autocomplete="off">
+            </li>
+            <li>
+                密码：<input type="password" name="pwd" placeholder="input your password">
+            </li>
+            <li>
+                确认密码：<input type="password" name="pwd" placeholder="confirm your password">
+            </li>
+        </ul>
+        <!-- 有name后台才能看到输入的什么东西 -->
+        <!-- name是表单元素的名字，这里性别单选必须有同一个name值才能实现多选一 -->
+        gender:
+        <input type="radio" name="sex" value="男" /> male
+        <input type="radio" name="sex" value="女" />female
+        <input type="radio" name="sex" checked="checked" value="momo" />momo<br> habit:
+        <input type="checkbox" name="hbt" value="sleep"> sleep
+        <input type="checkbox" name="hbt" value="reas" /> read
+        <input type="checkbox" name="hbt" value="eat" />eat
+        <br>
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+        <input type="button" value="click it" disabled><br> 请上传材料：
+        <input type="file" name="file" multiple accept=".image,.mp4">
+        <!-- 文件域默认只能选一个，用multiple属性可以多选 -->
+    </form>
+    <!-- value值和name值是每个表单元素都有的属性，主要给后台的人看 -->
+    <!-- 单选和多选要有相同的name值 -->
+    <!-- 单选和复选框可以有checked属性 -->
+    <!-- maxlength为最大输入字符数，较少使用 -->
+
+</body>
+
+</html>

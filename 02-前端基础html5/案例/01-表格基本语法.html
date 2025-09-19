@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            /* 表格居中显示 */
+            margin: 0 auto;
+            /* 设置边框 */
+            border: 1px solid black;
+            /* 合并边框 */
+            border-collapse: collapse;
+            /* 设置尺寸 */
+            width: 300px;
+            height: 100px;
+            /* 单元格内边距（对应HTML的cellpadding） */
+            text-align: center;
+        }
+        /* 设置表格单元格的边框 */
+        
+        th,
+        td {
+            border: 1px solid black;
+            /* 单元格内边距 */
+            padding: 18px;
+        }
+        /* 表格第一行背景颜色 */
+        
+        table tr:first-child {
+            background-color: #badef5;
+            /* 字体加粗 */
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        tr:nth-child(2n+1) {
+            background-color: #f5f2f2;
+        }
+        
+        tr:hover {
+            background-color: #c2ccd2;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 一定要写在表格的table里面 -->
+    <!-- align 对齐 -->
+    <!-- cellpadding 像素（内容距离单元格边框的距离），默认1 -->
+    <!-- cellspacing单元格之间的空白，默认1，不想要就写成0 -->
+    <!-- width 宽度 height 高度 -->
+    <!-- <table align="center" border="1" width="300" height="100" cellpadding="18" cellspacing="0"> -->
+    <table>
+        <tr>
+            <th>姓名</th>
+            <!-- 表头单元格 -->
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>rukawa kaede</td>
+            <!-- 不对称，怎么办 -->
+            <td>male</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>sendohn</td>
+
+            <td>male</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>hanamichi</td>
+            <td>male</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>mizu</td>
+            <td>male</td>
+            <td>16</td>
+        </tr>
+    </table>
+</body>
+<script>
+</script>
+
+</html>

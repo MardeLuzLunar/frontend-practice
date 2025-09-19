@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="../素材/rukawa/kaede.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #000;
+        }
+        
+        .box {
+            height: 500px;
+            width: 1140px;
+            margin: 50px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .box::before,
+        .box::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: #000;
+            border-radius: 50%;
+        }
+        
+        .box::before {
+            top: -50px;
+            content: '如果可以的话，我想问，你是我生命中的哪一天呢？';
+            color: #fff;
+            text-align: center;
+            line-height: 120px;
+        }
+        
+        .box::after {
+            bottom: -50px;
+        }
+        
+        .box ul {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            list-style: none;
+            overflow-x: scroll;
+            /* 隐藏滚动条 */
+            scrollbar-width: none;
+            scroll-behavior: smooth;
+        }
+        /* 让谷歌或火狐浏览器隐藏滚动条 */
+        
+        .box ul::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .box ul li img {
+            height: 500px;
+            /* 设置统一高度 */
+            /* object-fit: cover; */
+            /* 保持比例并填充容器，避免变形 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <img src="../素材/rukawa/sd (1).jpg" alt="">
+            </li>
+            <li>
+                <img src="../素材/rukawa/sd (2).jpg" alt="">
+            </li>
+            <li>
+                <img src="../素材/rukawa/sd (3).jpg" alt="">
+            </li>
+            <li><img src="../素材/rukawa/kaede.png" alt=""></li>
+            <li><img src="../素材/rukawa/rukawa 2.jpg" alt=""></li>
+            <li><img src="../素材/rukawa/rukawa 3.jpg" alt=""></li>
+            <li><img src="../素材/rukawa/rukawa 4.jpg" alt=""></li>
+            <li>
+                <img src="../素材/rukawa/sd (4).jpg" alt="">
+            </li>
+            <li><img src="../素材/rukawa/sd (5).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (6).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (7).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (8).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (9).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (10).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (11).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (12).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (13).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (14).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (15).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (16).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (17).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (18).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (19).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (20).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (21).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (22).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (23).jpg" alt=""></li>
+            <li><img src="../素材/rukawa/sd (24).jpg" alt=""></li>
+        </ul>
+    </div>
+</body>
+<script>
+    // 获取可滚动的容器
+    const scrollContainer = document.querySelector('.box ul');
+    // 监听鼠标滚轮事件
+    scrollContainer.addEventListener('wheel', (e) => {
+        // 阻止默认的垂直滚动行为
+
+        e.preventDefault();
+        // 根据滚轮的垂直滚动量（deltaY）调整横向滚动量（scrollLeft）
+        // 乘以系数（如 1.5）可调整滚动灵敏度
+        scrollContainer.scrollLeft += e.deltaY * 1.2;
+    });
+</script>
+
+</html>

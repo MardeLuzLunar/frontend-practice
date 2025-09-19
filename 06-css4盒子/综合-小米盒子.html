@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .cart {
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            text-align: center;
+            margin: 20px auto;
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .cart:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            /* box-shadow: 水平偏移 垂直偏移 模糊半径 颜色; - 这里添加了向下15px、模糊30px的半透明黑色阴影 */
+            transform: translateY(-3px);
+        }
+        
+        .cart img {
+            width: 160px;
+            height: 160px;
+            margin-top: 20px;
+        }
+        
+        .cart .title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 18px;
+        }
+        
+        .desc,
+        .price {
+            font-size: 12px;
+            color: #999;
+        }
+        
+        .desc {
+            padding: 0 10px;
+            overflow: hidden;
+            /* 溢出部分隐藏 */
+            text-overflow: ellipsis;
+            /* 溢出部分显示省略号 */
+            white-space: nowrap;
+            /* 强制文字不换行 */
+        }
+        
+        .price {
+            margin-top: 10px;
+        }
+        
+        .cart .price .num {
+            color: #ff6700
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <li>
+            <a href="https://www.mi.com/shop/buy/detail?product_id=20159" target="_blank">
+                <div class="cart">
+                    <img src="./img/xiaomi.webp" alt="">
+                    <h3 class="title">Xiaomi Buds 5</h3>
+                    <p class="desc">
+                        舒适无感佩戴｜高通全链路无损音频｜哈曼 AudioEFX 联合调音
+                    </p>
+                    <p class="price">
+                        <span class="num">659元</span>
+                        <del>
+      <span class="old-price">699元</span>
+          </del>
+                    </p>
+                </div>
+            </a>
+        </li>
+    </div>
+
+
+</body>
+
+</html>

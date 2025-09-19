@@ -1,0 +1,42 @@
+h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+p {
+    text-indent: 2em;
+    font: 22px/50px 'microsoft yahei'
+}
+
+div {
+    color: grey;
+    max-width: 800px;
+    /* 设置最大宽度，使内容不会太宽 */
+    margin: 0 auto;
+    /* 左右外边距自动，实现水平居中 */
+    padding: 0 20px;
+    /* 增加内边距，在小屏幕上有更好的显示效果 */
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: pink;
+    color: pink;
+}
+
+
+/* 让article元素在页面中间显示 */
+
+article {
+    max-width: 800px;
+    /* 设置最大宽度，使内容不会太宽 */
+    margin: 0 auto;
+    /* 左右外边距自动，实现水平居中 */
+    padding: 0 20px;
+    /* 增加内边距，在小屏幕上有更好的显示效果 */
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 500px;
+            margin: 100px auto;
+            position: relative;
+            /* overflow: hidden; */
+        }
+        
+        .box::before {
+            content: '';
+            /* display: block; */
+            /* 因为before是行内元素，但是加定位可以直接给高度和宽度 */
+            position: absolute;
+            top: 0px;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+        
+        .box ul {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            height: 100%;
+        }
+        
+        .box ul li {
+            /* width: 200px; */
+            /* 不压缩不拉伸，初始值为200px */
+            flex: 0 0 300px;
+            list-style: none;
+        }
+        
+        .box ul li img {
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (1).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (2).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (3).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (4).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (5).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (6).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (7).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (8).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (9).jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="../素材/rukawa/sd (10).jpg" alt=""></a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

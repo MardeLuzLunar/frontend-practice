@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 25px;
+        }
+        /* 标题标签比较特殊，要单独指定大小 */
+        
+        h2 {
+            font-size: 25px;
+            font-family: 'Microsoft Yahei';
+            /* 有多个单词组成的字体最好用引号，各个字体用英文逗号隔开 */
+            /* 写多个字体，逐级寻找 */
+            text-indent: 3em;
+        }
+        
+        p {
+            color: aqua;
+            font-family: Arial, Helvetica, sans-serif;
+            text-indent: 2em;
+        }
+        
+        .strong {
+            font-weight: 700;
+        }
+        
+        div {
+            /* font: style weight size/line-height family */
+            font: italic 700 20px/23px 'microsoft yahei'
+        }
+    </style>
+</head>
+
+<body>
+    <h2>再别康桥</h2>
+    <p>轻轻的我走了</p>
+    <p>正如我轻轻地来</p>
+    <p class="strong">我挥一挥衣袖</p>
+    <p>不带走一片云彩</p>
+    <div>徐志摩</div>
+</body>
+
+</html>

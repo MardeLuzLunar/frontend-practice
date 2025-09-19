@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 禁用按钮 */
+        
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            /* 分别是上下边距 左右边距 */
+            border: none;
+            border-radius: 5px;
+            /* 圆角 */
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:disabled {
+            /* background-color: #ccc; */
+            cursor: not-allowed;
+            /* 鼠标悬停时的光标样式 */
+            opacity: 0.2;
+            /* 透明度 */
+        }
+        /* 表单被选中伪类选择器 */
+        
+        input:checked+label {
+            /* 选中后变绿 */
+            color: #00ff00;
+        }
+    </style>
+</head>
+
+<body>
+    <button disabled>提交</button><br>
+    <input type="checkbox" name="" id="check" checked>
+    <label for="check">同意协议</label>
+
+</body>
+
+</html>

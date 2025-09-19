@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>友谊品质托管 - 专业教育辅导</title>
+    <!-- 更新到最新版本的Font Awesome以确保抖音图标可用 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            /* 所有文字行高为1.6倍 */
+        }
+        
+        .container {
+            /* max-width: 1200px; */
+            width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 头部样式 */
+        
+        header {
+            background: linear-gradient(135deg, #4e54c8, #8a64d0);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #ffd700;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ffd700;
+        }
+        /* 英雄区域样式 */
+        
+        .hero {
+            background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-content {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #ff5252;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        /* 服务区块样式 */
+        
+        .services {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #4e54c8;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            background: #4e54c8;
+            color: white;
+            font-size: 40px;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .service-content p {
+            color: #777;
+            margin-bottom: 20px;
+        }
+        /* AI课程区块样式 */
+        
+        .ai-courses {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f6f9fc, #eef2f7);
+        }
+        
+        .ai-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .ai-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .ai-text h2 {
+            font-size: 36px;
+            color: #4e54c8;
+            margin-bottom: 20px;
+        }
+        
+        .ai-text p {
+            color: #555;
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+        
+        .features {
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .feature-icon {
+            background: #4e54c8;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .feature-text h4 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        /* 环境展示区块样式 */
+        
+        .environment {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .environment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .env-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            height: 250px;
+        }
+        
+        .env-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .env-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .env-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            color: white;
+            padding: 20px;
+        }
+        /* 联系区块样式 */
+        
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #4e54c8, #8a64d0);
+            color: white;
+            text-align: center;
+        }
+        
+        .contact h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .contact p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .phone {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 30px 0;
+            color: #ffd700;
+        }
+        /* 页脚样式 */
+        
+        footer {
+            background: #333;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+        }
+        
+        .footer-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+        
+        .footer-bottom {
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+        /* 响应式设计 */
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 36px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .phone {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">友谊<span>品质教育</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#services">服务项目</a></li>
+                    <li><a href="#ai-courses">AI课程</a></li>
+                    <li><a href="#environment">学习环境</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 英雄区域 -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>友谊品质托管开始招生啦！</h1>
+            <p>专业辅导，舒适环境，为您的孩子提供全方位成长支持</p>
+            <a href="#contact" class="btn">立即报名</a>
+        </div>
+    </section>
+
+    <!-- 服务项目 -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>我们的服务项目</h2>
+                <p>全方位满足不同年龄段学生的学习需求</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>幼小衔接班</h3>
+                        <p>帮助幼儿顺利过渡到小学阶段，培养学习兴趣和基本能力。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>小升初衔接班</h3>
+                        <p>针对小学升初中的关键阶段，强化基础知识，提前适应中学学习节奏。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>暑期托辅班</h3>
+                        <p>暑假期间的全方位托管服务，兼顾学习与兴趣培养。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>午托</h3>
+                        <p>提供营养午餐和午休场所，确保学生下午有充足精力学习。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>晚托</h3>
+                        <p>晚间学习辅导，帮助学生完成作业并巩固当天所学知识。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>全托</h3>
+                        <p>全天候托管服务，提供学习、饮食、休息全方位照顾。</p>
+                        <a href="#contact" class="btn">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI课程 -->
+    <section class="ai-courses" id="ai-courses">
+        <div class="container">
+            <div class="ai-content">
+                <div class="ai-text">
+                    <h2>AI赋能数学 开启智慧之旅</h2>
+                    <p>在数学的海洋中，您是否渴望为孩子找到一条全新的学习航道？AI时代已经来临，数学学习也迎来了前所未有的变革！</p>
+                    <p>我们诚挚地邀请您和孩子参加一场别开生面的AI教学试课，一同探索未来教育的无限可能！</p>
+
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-route"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>个性化学习路径</h4>
+                                <p>AI精准分析孩子的学习状况，量身定制专属学习计划，让每个孩子都能在最适合自己的节奏中进步。</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>智能互动教学</h4>
+                                <p>生动有趣的AI教学场景，激发孩子的学习兴趣，让抽象的数学知识变得触手可及。</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>实时反馈与评估</h4>
+                                <p>即时了解孩子的学习成果，及时调整学习策略，确保学习效果最大化。</p>
+                            </div>
+                        </div>
+
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>资深教师团队</h4>
+                                <p>经验丰富的数学老师深度伴学与AI技术完美结合提供全方位的学习指导和支持。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 学习环境 -->
+    <section class="environment" id="environment">
+        <div class="container">
+            <div class="section-title">
+                <h2>舒适学习环境</h2>
+                <p>为学生提供安全、舒适、专业的学习空间</p>
+            </div>
+
+            <div class="environment-grid">
+                <div class="env-card">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80" alt="教室环境">
+                    <div class="env-overlay">
+                        <h3>现代化教室</h3>
+                    </div>
+                </div>
+
+                <div class="env-card">
+                    <img src="https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=600&q=80" alt="学习区">
+                    <div class="env-overlay">
+                        <h3>舒适学习区</h3>
+                    </div>
+                </div>
+
+                <div class="env-card">
+                    <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=600&q=80" alt="活动区">
+                    <div class="env-overlay">
+                        <h3>多功能活动区</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系区块 -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>立即报名，开启学习之旅</h2>
+            <p>欢迎咨询我们的课程和服务，我们的教育顾问将为您提供专业解答</p>
+
+            <div class="phone">
+                <i class="fas fa-phone"></i> 13606028550
+            </div>
+
+            <a href="tel:13606028550" class="btn">立即拨打</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于我们</h3>
+                    <p>友谊品质教育致力于为学生提供优质的教育辅导服务，结合先进的教育理念和技术，助力学生全面发展。</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>联系方式</h3>
+                    <p><i class="fas fa-phone"></i> 13606028550</p>
+                    <p><i class="fas fa-envelope"></i> info@youyiedu.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 福建省厦门市思明区莲花大厦</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <p>微信公众号：友谊教育</p>
+                    <div class="social-icons">
+                        <i class="fab fa-weixin"></i>
+                        <i class="fab fa-weibo"></i>
+                        <i class="fab fa-qq"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2023 友谊品质托管. 保留所有权利. | 万校互通</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <style>
+        body {
+            background-color: beige;
+        }
+        
+        table {
+            border-collapse: collapse;
+            line-height: 50px;
+        }
+        
+        input,
+        select,
+        textarea {
+            background-color: transparent;
+        }
+        
+        td {
+            padding: 5px auto;
+            padding-left: 15px;
+        }
+        
+        textarea {
+            resize: none;
+            margin-top: 5px;
+        }
+        
+        #submit {
+            margin: 0;
+            padding: 0;
+            width: 70px;
+            height: 40px;
+        }
+        
+        .name input {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="dhdf.php" method="get" target="_blank">
+        <table width="600" border="1" align="center">
+            <caption>
+                <h3>欢迎加入</h3>
+            </caption>
+            <tr>
+                <td>姓名</td>
+                <td class="name">
+                    <label for="lastname">姓氏：</label><input type="text" id="lastname">
+                    <label for="firstname">名字：</label><input type="text" id="firstname">
+                </td>
+            </tr>
+            <tr>
+                <!-- tr是表格的行 -->
+                <td>性别</td>
+                <td>
+                    <input type="radio" name="sex" value="male" id="man">
+                    <label for="man"><img src="../素材/man.jpg">男</label>
+                    <input type="radio" name="sex" value="female" id="woman">
+                    <label for="woman"><img src="../素材/women.jpg">女</label>
+                </td>
+            </tr>
+            <tr>
+                <td>生日</td>
+                <td>
+                    <select name="year">
+                        <option>--请选择年份--</option>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                    </select>
+                    <select name="month">
+                        <option>--请选择月份--</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <select name="date">
+                        <option>--请选择日--</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>所在地区</td>
+                <td>
+                    <select name="province">
+                        <option>--请选择省份--</option>
+                        <option>福建</option>
+                        <option>上海</option>
+                        <option>广东</option>
+                        <option>浙江</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>通勤方式</td>
+                <td>
+                    <input type="checkbox" name="work" value="walk" id="walk">
+                    <label for="walk">步行</label>
+                    <input type="checkbox" name="work" value="drive" id="drive">
+                    <label for="drive">开车</label>
+                    <input type="checkbox" name="work" value="bus" id="bus"><label for="bus">公共交通</label>
+                </td>
+            </tr>
+            <tr>
+                <td>学历</td>
+                <td>
+                    <select name="degree">
+                        <option>--请选择你的最高学历--</option>
+                        <option>高中</option>
+                        <option>大专</option>
+                        <option>本科</option>
+                        <option>硕士</option>
+                        <option>博士</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>自我介绍</td>
+                <td>
+                    <textarea cols="50" rows="4"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="免费注册" id="submit">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="checkbox" checked="checked">我同意注册条款和会员加入标准
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <a href="#">我是会员，立即登录</a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <h4>我承诺</h4>
+                    <ul>
+                        <li>年满18岁</li>
+                        <li>不做违反本社团条规的事项</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+</html>

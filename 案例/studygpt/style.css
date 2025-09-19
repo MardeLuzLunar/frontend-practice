@@ -1,0 +1,87 @@
+/* 全局设置 */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background-color: #f3f5f7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.w {
+    width: 1200px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    height: 42px;
+    margin: 30px auto;
+
+}
+
+.nav {
+    margin-left: 60px;
+    display: flex;
+    gap: 20px;
+    line-height: 42px;
+
+}
+
+.nav li:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-left: 70px;
+}
+
+.search input {
+    box-sizing: border-box;
+    height: 36px;
+    width: 345px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+    /* 去掉右边边框，让按钮贴上去 */
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search button {
+    height: 36px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-left: none;
+    /* 去掉左边边框，让按钮贴上输入框 */
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.user {
+    line-height: 42px;
+    margin-left: 100px;
+    font-size: 14px;
+
+}
+
+.banner {
+    background-color: #00a4ff;
+    height: 400px;
+}

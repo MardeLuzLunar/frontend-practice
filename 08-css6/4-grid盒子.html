@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            background-color: pink;
+            /* border: 1px solid #000; */
+            display: grid;
+            width: 320px;
+            height: 320px;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        
+        .box div {
+            background-color: aliceblue;
+        }
+        /* 如果要很多行，不要设置行轨道，给子盒子高度 */
+        
+        .content {
+            display: grid;
+            width: 1000px;
+            margin: 0 auto;
+            border: 1px solid #000;
+            grid-template-columns: 160px 160px 160px 160px 160px 160px;
+            justify-content: space-between;
+        }
+        
+        .content div {
+            background-color: rgb(73, 119, 159);
+            height: 130px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+    </div>
+    <div class="content">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div>
+        <div class="item11">11</div>
+        <div class="item12">12</div>
+        <div class="item13">13</div>
+        <div class="item14">14</div>
+        <div class="item15">15</div>
+        <div class="item16">16</div>
+        <div class="item17">17</div>
+        <div class="item18">18</div>
+        <div class="item19">19</div>
+        <div class="item20">20</div>
+    </div>
+</body>
+
+</html>

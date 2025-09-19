@@ -1,0 +1,6 @@
+<html>(/开始标签）</html>（/结束标签) （/双标签）
+<html>
+    <head></head>
+    <body></body>
+</html>
+<br/>(/单标签）

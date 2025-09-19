@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, red 40%, blue);
+        }
+        
+        .text {
+            font-size: large;
+            font-weight: 700;
+            /* 渐变文字背景 */
+            background: linear-gradient(45deg, red 40%, blue);
+            -webkit-background-clip: text;
+            background-clip: text;
+            /* 文字背景裁剪，类似蒙版 */
+            -webkit-text-fill-color: transparent;
+            /*将文字本身设置为透明，这样文字区域就会显示出背后的渐变背景
+            /* 确保文字渐变正确显示 */
+            display: inline-block;
+            /* 确定文字区域 */
+            text-decoration: none;
+        }
+        
+        .gradient-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(45deg, red 40%, blue);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            /*所有动画过渡.3s,缓入缓出*/
+        }
+        
+        .gradient-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        /* 点击效果 */
+        
+        .gradient-btn:active {
+            transform: translateY(0px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="text">hello,world. I'll kick you out!</div>
+    <button class="gradient-btn">搜索</button>
+</body>
+
+</html>

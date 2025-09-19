@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素选择器 */
+        
+        p::first-letter {
+            font-size: 30px;
+            color: red;
+        }
+        /* 第一个字母后面的内容 */
+        
+        p::first-line {
+            color: blue;
+        }
+        
+        textarea::placeholder {
+            color: red;
+        }
+        /* 伪元素选择器 */
+        
+        .box::before {
+            content: "你好";
+            color: red;
+        }
+        
+        .box::after {
+            content: "你好";
+            color: rgb(197, 182, 182);
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        我是一个段落 你好我是一个伪元素选择器的工具人 你好我是一个伪元素选择器的工具人 你好我是一个伪元素选择器的工具人
+    </p>
+    <textarea name="" id="" placeholder="please tag"></textarea>
+    <div class="box">hello world</div>
+</body>
+
+</html>

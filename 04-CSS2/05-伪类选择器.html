@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        a:visited {
+            color: rgb(139, 46, 121);
+        }
+        
+        a:hover {
+            color: skyblue;
+        }
+        
+        a:active {
+            color: green;
+        }
+        
+        .text:link {
+            color: #333;
+        }
+        
+        .text:hover {
+            color: red;
+        }
+        
+        div {
+            background-color: pink;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            color: #333;
+        }
+        
+        div:hover {
+            background-color: skyblue;
+            color: #fff;
+        }
+    </style>
+</head>
+<!-- a:link   选择所有未被访问的链接,因为是附着于a上的，所以是a:hover,也可以是div:hover，以此类推 -->
+<!-- a:visited 选择所有已被访问的链接 -->
+<!-- a:hover 选择鼠标指针位于其上的链接 -->
+<!-- a:active 选择活动链接（鼠标按下未弹起的链接） -->
+
+<body>
+    <a href="#">你好</a><br>
+    <a href="###">你好,这是什么</a><br>
+    <a href="www.fdffd.com" class="text" target="_blank">试试</a>
+    <div class="">
+        你好
+    </div>
+</body>
+
+</html>

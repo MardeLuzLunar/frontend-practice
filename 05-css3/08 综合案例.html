@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: aquamarine;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .box {
+            width: 298px;
+            height: 480px;
+            background-color: #fff;
+            margin: 100px auto;
+        }
+
+        .box img {
+            width: 100%;
+            /* 图片的宽度与父级一样 */
+        }
+
+        .review {
+            height: 70px;
+            font-size: 14px;
+            font-family: microsoft yahei;
+            padding: 0 28px;
+            /* 因为没有width属性，所以padding不会撑大盒子 */
+            margin-top: 10px;
+            /* 有高度，所以用margin */
+        }
+
+        .appraise {
+            font-size: 14px;
+            font-family: microsoft yahei;
+            color: gray;
+            padding: 0 28px;
+        }
+
+        .info {
+            font-size: 14px;
+            font-family: microsoft yahei;
+            padding: 0 28px;
+            margin-top: 20px;
+
+        }
+
+        .info h4 {
+            display: inline-block;
+        }
+
+        .info em {
+            font-style: normal;
+            color: rgb(136, 182, 182);
+            margin-left: 20px;
+            margin-right: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../素材/rukawa/kaede.png" alt="">
+        <p class="review">无需脆弱为之赋魅的——流川枫</p>
+        <div class="appraise">来源于drunkstar的评价</div>
+        <div class="info">
+            <span><a href="#">只需一颗篮球就能带走...</a></span>
+            <em>|</em>
+            <h4 style="color: orange;">99.9元</h4>
+            <!-- 用h标签是为了合理的地方用合理的标签，标题用h，大量文字用p -->
+        </div>
+    </div>
+</body>
+
+</html>

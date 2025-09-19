@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 自动播放最好先静音muted,循环播放loop -->
+    <!-- 如果属性的 键 和 值 相同 可以省略 值.比如autoplay="autoplay"可以直接写成autoplay -->
+    <!-- <video src="../素材/音频/xiaomi icon.mp4" width="600" controls="controls" autoplay muted loop></video> -->
+    <!-- <video src="../素材/图像音频/xiaomi icon.mp4" width="600" controls="controls" muted loop poster="../素材/图像音频/xiaomi icon.jpg"></video> -->
+
+    <!-- 兼容写法 -->
+    <video width="600" controls muted loop poster="../素材/图像音频/xiaomi icon.jpg">
+    <source src="../素材/图像音频/xiaomi icon.mp4" type="video/mp4">
+    <source src="../素材/图像音频/xiaomi icon.ogg" type="video/ogg">
+    <p>您的浏览器不支持HTML5 video 标签,请升级浏览器</p>
+  </video>
+
+    <!-- 音频标签浏览器默认不自动播放，需要用户手动播放 -->
+    <audio src="../素材/图像音频/红豆-王菲.mp3" controls="controls"></audio>
+    <!-- 兼容写法 -->
+    <audio controls="controls">
+      <source src="../素材/图像音频/红豆-王菲.mp3" type="audio/mp3">
+        您的浏览器不支持HTML5 audio 标签,请升级浏览器
+    </audio>
+
+</body>
+
+</html>

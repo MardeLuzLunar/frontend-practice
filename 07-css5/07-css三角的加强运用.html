@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            /* border-top: 88px solid ransparent;
+            border-right: 50px solid orange;
+            把左边和下面的边框宽度设为0
+            border-bottom: 0px solid blue;
+            border-left: 0px solid green; */
+            border-color: transparent orange transparent transparent;
+            border-style: solid;
+            border-width: 88px 50px 0 0;
+        }
+
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            margin: auto;
+            line-height: center;
+
+
+        }
+
+        .now {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+            text-align: center;
+            color: #fff;
+        }
+
+        .now i {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-color: transparent #fff transparent transparent;
+            border-style: solid;
+            border-width: 24px 10px 0 0;
+        }
+
+        .origin {
+            font-size: 12px;
+            color: gray;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="price">
+        <span class="now">￥1234
+            <i></i>
+        </span>
+        <span class="origin">￥8848</span>
+    </div>
+</body>
+
+</html>

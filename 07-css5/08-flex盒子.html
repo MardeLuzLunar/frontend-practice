@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            display: flex;
+            /* 主轴的对齐方式 */
+            justify-content: space-between;
+            /* 侧轴的对齐方式 */
+            align-items: center;
+            width: 1200px;
+            height: 300px;
+            border: 1px solid pink;
+        }
+        
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            /* 字居中对齐 */
+            text-align: center;
+            /* 字垂直居中对齐 */
+            line-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+        <div class="item">1</div>
+    </div>
+</body>
+
+</html>
